@@ -10,9 +10,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow-[inset_0px_2px_8px_0px_rgba(255,255,255,0.4),inset_0px_-2px_8px_0px_rgba(255,255,255,0.4)] hover:bg-primary/90",
+          "bg-primary text-primary-foreground shadow-[inset_0px_2px_8px_0px_rgba(255,255,255,0.25),inset_0px_-2px_8px_0px_rgba(255,255,255,0.25)] dark:shadow-[inset_0px_2px_8px_0px_rgba(0,0,0,0.3),inset_0px_-2px_8px_0px_rgba(0,0,0,0.3)] hover:bg-primary/90",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-[inset_0px_2px_8px_0px_rgba(255,46,46,0.4),inset_0px_-2px_8px_0px_rgba(255,46,46,0.4)] hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground shadow-[inset_0px_2px_8px_0px_rgba(180,0,0,0.4),inset_0px_-2px_8px_0px_rgba(180,0,0,0.4)] dark:shadow-[inset_0px_2px_8px_0px_rgba(255,46,46,0.4),inset_0px_-2px_8px_0px_rgba(255,46,46,0.4)] hover:bg-destructive/90",
         outline:
           "border border-input bg-background shadow-[inset_0px_2px_4px_0px_rgba(34,40,49,0.1),inset_0px_-2px_4px_0px_rgba(34,40,49,0.1)] hover:bg-accent hover:text-accent-foreground",
         secondary:
@@ -31,7 +31,7 @@ const buttonVariants = cva(
       variant: "default",
       size: "default",
     },
-  },
+  }
 );
 
 export interface ButtonProps
@@ -50,7 +50,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       />
     );
-  },
+  }
 );
 Button.displayName = "Button";
 
