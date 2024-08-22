@@ -130,6 +130,8 @@ const HorizontalOffset = ({
         <Label>Horizontal offset</Label>
         <div className="flex items-center gap-1">
           <Input
+            id={`horizontal-offset-${index}`}
+            aria-label="Horizontal offset"
             className="w-[4.5rem]"
             type="number"
             value={shadow.horizontalOffset}
@@ -143,6 +145,7 @@ const HorizontalOffset = ({
         </div>
       </div>
       <Slider
+        aria-label="Horizontal offset"
         min={-100}
         max={100}
         value={[shadow.horizontalOffset]}
@@ -169,6 +172,8 @@ const VerticalOffset = ({
         <Label>Vertical offset</Label>
         <div className="flex items-center gap-1">
           <Input
+            id={`vertical-offset-${index}`}
+            aria-label="Vertical offset"
             className="w-[4.5rem]"
             type="number"
             value={shadow.verticalOffset}
@@ -182,6 +187,7 @@ const VerticalOffset = ({
         </div>
       </div>
       <Slider
+        aria-label="Vertical offset"
         min={-100}
         max={100}
         value={[shadow.verticalOffset]}
@@ -208,6 +214,8 @@ const BlurRadius = ({
         <Label>Blur radius</Label>
         <div className="flex items-center gap-1">
           <Input
+            id={`blur-radius-${index}`}
+            aria-label="Blur radius"
             className="w-[4.5rem]"
             type="number"
             value={shadow.blurRadius}
@@ -219,6 +227,7 @@ const BlurRadius = ({
         </div>
       </div>
       <Slider
+        aria-label="Blur radius"
         min={0}
         max={100}
         value={[shadow.blurRadius]}
@@ -243,6 +252,8 @@ const SpreadRadius = ({
         <Label>Spread radius</Label>
         <div className="flex items-center gap-1">
           <Input
+            id={`spread-radius-${index}`}
+            aria-label="Spread radius"
             className="w-[4.5rem]"
             type="number"
             value={shadow.spreadRadius}
@@ -254,6 +265,7 @@ const SpreadRadius = ({
         </div>
       </div>
       <Slider
+        aria-label="Spread radius"
         min={-100}
         max={100}
         value={[shadow.spreadRadius]}
@@ -278,6 +290,8 @@ const Color = ({
     <div className="flex flex-col justify-center gap-2 py-2">
       <Label>Color</Label>
       <Input
+        id={`color-${index}`}
+        aria-label="Color"
         type="color"
         value={shadow.color}
         onChange={(e) => mutateShadow(index, { color: e.target.value })}

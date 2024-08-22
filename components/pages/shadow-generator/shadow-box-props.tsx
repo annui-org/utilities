@@ -17,6 +17,8 @@ export const ShadowBoxProps = () => {
           <Label>Width</Label>
           <div className="flex items-center gap-2">
             <Input
+              id="box-width"
+              aria-label="Width"
               type="number"
               value={box.width.replace("px", "")}
               onChange={(e) => mutateBox({ width: `${e.target.value}px` })}
@@ -28,6 +30,8 @@ export const ShadowBoxProps = () => {
           <Label>Height</Label>
           <div className="flex items-center gap-2">
             <Input
+              id="box-height"
+              aria-label="Height"
               type="number"
               value={box.height.replace("px", "")}
               onChange={(e) => mutateBox({ height: `${e.target.value}px` })}
@@ -39,6 +43,8 @@ export const ShadowBoxProps = () => {
           <Label>Border Radius</Label>
           <div className="flex items-center gap-2">
             <Input
+              id="box-radius"
+              aria-label="Border Radius"
               type="number"
               value={box.radius.replace("px", "")}
               onChange={(e) => mutateBox({ radius: `${e.target.value}px` })}
@@ -49,6 +55,8 @@ export const ShadowBoxProps = () => {
         <div>
           <Label>Background Color</Label>
           <Input
+            id="box-background"
+            aria-label="Background Color"
             type="color"
             value={box.background}
             onChange={(e) => mutateBox({ background: e.target.value })}
