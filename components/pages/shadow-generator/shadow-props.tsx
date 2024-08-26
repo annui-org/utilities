@@ -18,6 +18,7 @@ import { Input } from "@/components/ui/input";
 import { Slider } from "@/components/ui/slider";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion, useAnimate } from "framer-motion";
+import { ColorPicker } from "@/components/ui/color-picker";
 
 export const ShadowProps = () => {
   const { shadows, mutateShadow, removeShadow, addShadow } =
@@ -289,12 +290,13 @@ const Color = ({
   return (
     <div className="flex flex-col justify-center gap-2 py-2">
       <Label>Color</Label>
-      <Input
-        id={`color-${index}`}
-        aria-label="Color"
-        type="color"
-        value={shadow.color}
-        onChange={(e) => mutateShadow(index, { color: e.target.value })}
+      <ColorPicker
+        inputProps={{
+          id: `color-${index}`,
+          "aria-label": "Color",
+        }}
+        color={shadow.color}
+        onChange={(color) => mutateShadow(index, { color })}
       />
     </div>
   );
