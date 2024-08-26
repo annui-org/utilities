@@ -17,7 +17,7 @@ export const UtilitySelect = ({ current }: { current: Utility }) => {
       <DropdownMenuTrigger asChild>
         <Button
           key={current.url}
-          className="flex gap-2 h-full text-start focus-visible:ring-0 px-2 py-1 text-primary shadow-none"
+          className="flex gap-2 h-full text-start focus-visible:ring-0 px-2 py-1 text-primary"
           variant="outline"
         >
           <current.icon className="size-6" />
