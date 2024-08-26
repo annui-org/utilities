@@ -30,5 +30,6 @@ export function generateMetadata({ params }: Props): Metadata {
 
   return {
     title: current?.name,
+    description: current?.description,
   };
 }
