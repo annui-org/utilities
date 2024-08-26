@@ -9,7 +9,7 @@ function generateId() {
 
 export type IShadowGeneratorStoreMutateShadow = (
   index: number,
-  shadow: Partial<IShadowGeneratorStoreShadow>
+  shadow: Partial<IShadowGeneratorStoreShadow>,
 ) => void;
 
 export type IShadowGeneratorStoreRemoveShadow = (index: number) => void;
@@ -84,7 +84,7 @@ export const useShadowGeneratorStore = create<IShadowGeneratorStore>(
                   shadow.verticalOffset
                 }px ${shadow.blurRadius}px ${shadow.spreadRadius}px ${
                   shadow.color
-                }`
+                }`,
             )
             .join(", ");
         case "tailwind":
@@ -96,7 +96,7 @@ export const useShadowGeneratorStore = create<IShadowGeneratorStore>(
                   shadow.verticalOffset
                 }px_${shadow.blurRadius}px_${
                   shadow.spreadRadius
-                }px_${shadow.color.replace(/, /g, ",")}`
+                }px_${shadow.color.replace(/, /g, ",")}`,
             )
             .join(",");
       }
@@ -136,5 +136,5 @@ export const useShadowGeneratorStore = create<IShadowGeneratorStore>(
           },
         ],
       })),
-  })
+  }),
 );

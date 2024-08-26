@@ -34,7 +34,7 @@ export function ThemeSwitcher() {
                 ? "light"
                 : theme === "light"
                   ? "dark"
-                  : "system"
+                  : "system",
             )
           }
         >

@@ -39,7 +39,7 @@ export function ColorPicker({
       /^rgb\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*\)$/.test(value) ||
       /^hsl\(\s*\d+\s*,\s*\d+%?\s*,\s*\d+%?\s*\)$/.test(value) ||
       /^rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*(0(\.\d+)?|1(\.0+)?)\s*\)$/.test(
-        value
+        value,
       ) ||
       /^[a-zA-Z]+$/.test(value)
     ) {
@@ -55,7 +55,7 @@ export function ColorPicker({
           className={cn(
             "w-[220px] justify-start text-left font-normal",
             !color && "text-muted-foreground",
-            className
+            className,
           )}
         >
           <div
