@@ -1,5 +1,6 @@
 "use client";
 
+import { ColorPicker } from "@/components/ui/color-picker";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { useShadowGeneratorStore } from "@/stores/shadow-generator";
@@ -54,12 +55,13 @@ export const ShadowBoxProps = () => {
         </div>
         <div>
           <Label>Background Color</Label>
-          <Input
-            id="box-background"
-            aria-label="Background Color"
-            type="color"
-            value={box.background}
-            onChange={(e) => mutateBox({ background: e.target.value })}
+          <ColorPicker
+            inputProps={{
+              id: "box-background",
+              "aria-label": "Background Color",
+            }}
+            color={box.background}
+            onChange={(color) => mutateBox({ background: color })}
           />
         </div>
       </div>

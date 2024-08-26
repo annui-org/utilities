@@ -10,6 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { ThemeSwitcher } from "./theme-switcher";
 
 export const Header = ({ current }: { current: Utility }) => {
   return (
@@ -27,6 +28,7 @@ export const Header = ({ current }: { current: Utility }) => {
             </TooltipTrigger>
             <TooltipContent>View the source code on GitHub</TooltipContent>
           </Tooltip>
+          <ThemeSwitcher />
         </nav>
       </div>
       <Actions />
